@@ -1,0 +1,17 @@
+version: '3'
+services:
+  web:
+    build:
+      context: /storage/project/Mydocker/dockerfile
+      dockerfile: nginx
+      args:
+        - buildno=1
+        - user=nobody
+    image: nginx/compose-build
+    container_name: 'nginx'
+    restart: 'always'
+    ports:
+    - '80:80'
+    volumes:
+    - /storage/lab/nginx/logs:/var/log/nginx
+    - /storage/lab/nginx/config:/etc/nginx/conf.d

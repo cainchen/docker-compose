@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+   db:
+     image: mysql:5.7
+     restart: always
+     container_name: mysql
+     hostname: mysql
+     environment:
+       MYSQL_ROOT_PASSWORD: <Modify here>
+       MYSQL_DATABASE: <Modify here>
+       MYSQL_USER: <Modify here>
+       MYSQL_PASSWORD: <Modify here>
+     ports:
+       - "3306:3306"
+     dns:
+       - <Adding/Modify here>
+     volumes:
+       - <Adding/Modify here>
