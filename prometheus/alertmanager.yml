@@ -1,0 +1,18 @@
+global:
+  smtp_smarthost: 'smtp.gmail.com:465'
+  smtp_from: 'monitor@cain.mac.io'
+  smtp_auth_username: 'cain90129@gmail.com'
+  smtp_auth_password: 'mgzaq123!@#'
+  smtp_require_tls: false
+
+route:
+  group_by: ['alertname']
+  group_wait: 10s
+  group_interval: 10s
+  repeat_interval: 10m
+  receiver: live-monitoring
+
+receivers:
+- name: 'live-monitoring'
+  email_configs:
+  - to: 'shu90129@gmail.com'
