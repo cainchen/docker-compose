@@ -28,10 +28,8 @@ scrape_configs:
   - job_name: 'cadvisor'
     static_configs:
       - targets: ['192.168.43.171:8080']
-      - targets: ['192.168.43.71:8080']
 
   - job_name: 'node'
     scrape_interval: 8s
     static_configs:
       - targets: ['192.168.43.171:9100']
-      - targets: ['192.168.43.71:9100']
